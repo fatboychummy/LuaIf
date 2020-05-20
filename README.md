@@ -17,6 +17,8 @@ Well now, you can completely ignore all good coding practices, and use my amazin
 
 * Potential bugs!
 
+* Capitalization:tm:
+
 * No need to use an end!
 
 ## Possible things you may achieve from using this:
@@ -34,6 +36,7 @@ Well now, you can completely ignore all good coding practices, and use my amazin
 1. Download the file and put it in the same folder as your program
 
 2. At the top of your file, simply type `local If = require "If"`, and bang, you've got some new, fancy If statements.
+  * Just make sure you use a capital `I` (or `F`, or both; I'm not judging) so that Lua knows it's different from the normal `if`.
 
 
 ## Check the `example.lua` file for an example!
