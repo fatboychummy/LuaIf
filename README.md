@@ -36,6 +36,4 @@ Well now, you can completely ignore all good coding practices, and use my amazin
 2. At the top of your file, simply type `local If = require "If"`, and bang, you've got some new, fancy If statements.
 
 
-## Examples:
-
-```
+## Check the `example.lua` file for an example!

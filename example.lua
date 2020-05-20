@@ -45,7 +45,7 @@ local function checkVal(val)
     function()
       print("Val is unknown")
     end
-  ).End()
+  )
 end
 
 for i = 1, 11 do
