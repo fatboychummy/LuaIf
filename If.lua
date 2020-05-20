@@ -1,26 +1,29 @@
 local If = {}
 
-local function ElseC(condition)
+function If.ElseC(condition, kill)
   return {
     Else = function(func)
-      local tmp = not condition and func and func()
-      return not func and If or {End = If.End}
+      local tmp = not condition and not kill and func and func()
+      return not func and not condition and If
+             or not func and condition and {End = If.End, If = function() return If.ThenC(false, true) end}
+             or {End = If.End}
     end,
     End = If.End
   }
 end
 
-local function ThenC(condition)
+function If.ThenC(condition, kill)
   return {
     Then = function(func)
       local tmp = condition and func and func()
-      return ElseC(condition)
+      kill = kill or condition
+      return If.ElseC(condition, kill)
     end
   }
 end
 
-function If.If(condition)
-  return ThenC(condition)
+function If.If(condition, kill)
+  return If.ThenC(condition)
 end
 
 function If.End()
