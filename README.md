@@ -19,7 +19,7 @@ Well now, you can completely ignore all good coding practices, and use my amazin
 
 * Capitalization:tm:
 
-* No need to use an end!
+* No need to use an end (in the if statement, at least)!
 
 ## Possible things you may achieve from using this:
 
