@@ -4,7 +4,7 @@ function If.ElseC(condition, kill)
   return {
     Else = function(func)
       local tmp = not condition and not kill and func and func()
-      return not func and not condition and If
+      return not func and not condition and {End = If.End, If = function(c) return If.ThenC(c, kill) end}
              or not func and condition and {End = If.End, If = function() return If.ThenC(false, true) end}
              or {End = If.End}
     end,
